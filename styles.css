@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+.green {
+    color: rgb(7, 127, 17);
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Montserrart", sans-serif;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 16px;
+    box-shadow: -2px -2px 6px 2px #fff, 2px 2px 6px 2px #c4c4c4;
+    border-color: #DFDFDF;
+}
+body {
+    background-color: #eee;
+}
+.header {
+    text-align: center;
+    font-size: 10px;
+    border: 1px solid rgb(252, 252, 240);
+    border-radius: 16px;
+    box-shadow: -2px -2px 10px 2px #ffffff, inset 2px 2px 10px 2px #8c8989;
+}
+.def ul {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: -2px -2px 6px 2px #FFF, 2px 2px 6px 2px #C4C4C4;
+    border-color: #DFDFDF;
+}
+li {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: inset -1px -1px 3px 1px #FFF, inset 1px 1px 3px 1px #C4C4C4;
+    border-color: #DFDFDF;
+    padding: 5px;
+    margin: 5px 10px 5px 5px;
+}
+.syntax {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: -2px -2px 10px 2px #FFF, 2px 2px 10px 2px #C4C4C4;
+    border-color: #DFDFDF;
+    padding: 5px;
+    font-size: 11px;
+}
+.syntax h1 {
+    font-size: 15px;
+    margin: 0;
+}
+table, caption, td, th, thead, tbody, tr {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: -2px -2px 6px 2px #FFF, 2px 2px 6px 2px #C4C4C4;
+    border-color: #DFDFDF;
+    padding: 3px;
+}
+.footer {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: -2px -2px 10px 4px #C4C4C4, 2px 2px 10px 2px #FFF;
+    border-color: #DFDFDF;
+}
+.footer2 {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: inset -2px -2px 10px 4px #C4C4C4, inset 2px 2px 10px 2px #FFF;
+    border-color: #DFDFDF;
+}
+.footer3 {
+    margin-left: 15px;
+}
+.examples {
+    margin: 0;
+    padding: 0;
+}
+
+/* For mobile phone */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
+.header {
+    text-align: left;
+    padding-left: 20px;
+}
+.syntax {
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 18px;
+}
+.def {
+    padding-top: 5px;
+}
+.def ul {
+    padding: 20px;
+}
+.footer3 {
+    margin-left: 0px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charAt()</title>
+</head>
+<body>
+    <h1>JavaScript String charAt()</h1>
+    <pre>
+        Def:
+            The charAt() method
+                returns the character at a specified index (position) in a string.
+                    the index position is <strong>required</strong>
+            So attach the method to
+                an expression thats a string data type
+                    put an index number in the parenthasis
+                        and you get back the letter at that index
+        <b>Syntax</b>
+            <i>string.</i>charAt(index)
+
+            <p id="ex1"></p>
+            <p id="ex2"></p>
+    </pre>
+    <script>
+        let text = "hello world";
+        let letter = text.charAt(3);
+        let letter2 = text.charAt(text.length-1);
+
+        document.getElementById("ex1").innerHTML = letter;
+        document.getElementById("ex2").innerHTML = letter2;
+    </script>
+</body>
+</html>

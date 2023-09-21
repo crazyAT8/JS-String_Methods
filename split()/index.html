@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Method</title>
+</head>
+<body>
+    <h1>Split Method</h1>
+    <h3>String Method in JavaScript</h3>
+    <pre>
+        This method splits a String
+            into an array
+                of substrings,
+                    and returns the array 
+
+        <b><i>Syntax:</i></b>
+            <i>string.</i>split(<i>separator, limit</i>)
+
+    Ex: 
+        let text = "This is an example of the split method"                                          //declare a string variable
+        const exampleArray = text.split(" ");                                                       // declare another variable that uses split on your string variable  
+        
+        document.getElementById("ex1").innerHTML = exampleArray;                                    // call the second variable to an id in the DOM
+
+        Output:
+        <p id="ex1"></p>
+        Every word is an element of the array
+        thats bc the parameter is telling it to index at every space
+
+<b>Note the difference:</b>
+        let text2 = "This is what happens when you don't leave a space in the quotation marks";
+        const example2Array = text2.split("")
+
+        document.getElementById("ex2").innerHTML = example2Array;
+
+        Output:
+        <p id="ex2"></p>
+        All the letters and even the spaces are an element of the Array
+        thats bc the parameter is telling it to index everything
+
+<b>
+    Now that we've slpit the string into an array 
+    lets call a word at a certain index:
+</b>
+        document.getElementById("ex3").innerHTML = exampleArray[1];
+        // this calls the index of the exampleArray variable
+
+        Output: <p id="ex3"></p>
+
+<b>
+    Now lets appy, what is called, a "Limit Parameter"
+</b>
+        let text3 = "This is what happens when you apply a limit parameter";
+        const exampleArray3 = text3.split(" ", 4);                                                      // the second parameter is the number of indexes you want returned
+
+        document.getElementById("ex4").innerHTML = exampleArray3;
+
+        Output: <p id="ex4"></p>
+    </pre>
+
+
+    <script src="code.js"></script>
+</body>
+</html>
