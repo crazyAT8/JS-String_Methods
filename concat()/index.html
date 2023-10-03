@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Strign Method .charCode()</title>
+    <title>JS String Methods</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -12,19 +12,21 @@
 </head>
 <body>
     <div class="header">
-        <h1><u>JavaScript String Method</u>: <mark>.charCode()</mark></h1>
+        <h1><u>JavaScript String Method</u>: <mark>.concat()</mark></h1>
     </div>
 
     <div class="row">
         <div class="col-4 def">
             <ul><b><u>Definition</u>:</b>
-                <li>this method returns the Unicode of the character at a specified index (position) in a string.</li>
+                <li>this method joins two or more strings.</li>
+                <li>this method does not change the existing strings.</li>
+                <li>this method returns a new string.</li>
             </ul>
         </div>
 
         <div class="col-4 syntax">
             <h1><u><i>Syntax</i></u></h1>
-            <p><b><i>string.charCodeAt(index)</i></b></p>
+            <p><b><i>string.concat(string1, string2, ..., stringX)</i></b></p>
         </div>
 
         <div class="col-4">
@@ -39,11 +41,10 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>index</td>
+                            <td>string1,<br> string2,<br>...<br>stringX</td>
                             <td>
-                                Optional. A number. <br>
-                                The index (position) of a character. <br>
-                                Default value = 0.
+                                Required.<br>
+                                The strings to be joined.
                             </td>
                         </tr>
                     </tbody>
@@ -59,29 +60,23 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>A number</td>
-                            <td>The Unicode of the character at the specified index. NaN if the index is invalid.</td>
+                            <td>A string</td>
+                            <td>A new string containing the combined strings.</td>
                         </tr>
                     </tbody>
+
                 </table>
             </div>
         </div>
 
         <div class="footer">
             <ul><b><u>Notes</u>:</b>
-                <li> <h4>charCodeAt() vs codePointAt()</h4>
-                    <ul>
-                        <li><mark>charCodeAt()</mark> is UTF-16, <mark>codePointAt()</mark> is Unicode</li>
-                        <li><mark>charCodeAt()</mark> returns a number between 0 and 65535.</li>
-                        <li>Both methods return an integer representing the UTF-16 code of a character, but only <mark>codePointerAt()</mark> can return the full value of a Unicode value greater 0xFFFF (65535).</li>
-                    </ul>
-                </li>
-                <li><mark>charCodeAt()</mark> is an ECMAScript1 (ES1) feature.</li>
-                <li>ES1 (JavaScript 1997) is fully supported in all browsers.</li>
+                <li>concat() is an ECMAScript1 (ES1) feature.</li>
+                <li>ES1 (JavaScript 1997) is fully supported in all browsers</li>
             </ul>
             <ul><b><u>Reference</u>:</b>
                 <li>
-                    <a href="https://www.w3schools.com/jsref/jsref_charcodeat.asp">W3schools</a>
+                    <a href="https://www.w3schools.com/jsref/jsref_concat_string.asp">W3schools</a>
                 </li>
             </ul>
         </div>
@@ -93,14 +88,12 @@
                     <h4><b><u>Code</u>:</b></h4>
                         <p class="examples">
                             <code>
-                                let text = "HELLO WORLD";                       <br>
-                                let code = text.charCodeAt(0);                  <br>
-                                let code2 = text.charCodeAt(text.length-1);     <br>
-                                let code3 = text.charCodeAt(15);                <br>
+                                let text1 = "Hello";<br>
+                                let text2 = "world!";<br>
+                                let text3 = "Have a nice day!";<br>
+                                let result = text1.concat(" ", text2, " ", text3);<br>
                                 <br>
-                                document.getElementById ("example1").innerHTML = code;   <br>
-                                document.getElementById ("example2").innerHTML = code2;  <br>
-                                document.getElementById ("example3").innerHTML = code3;  <br>
+                                document.getElementById("example1").innerHTML = result;<br>
                             </code>
                         </p>
                 </div>
@@ -109,22 +102,18 @@
             <div class="col-5 footer">
                 <ol><b><u>Result:</u></b>
                     <li><span id="example1"></span></li>
-                    <li><span id="example2"></span></li>
-                    <li><span id="example3"></span></li>
                 </ol>
             </div>
         </div>
     </div>
 
     <script>
-        let text = "HELLO WORLD";
-        let code = text.charCodeAt(0);
-        let code2 = text.charCodeAt(text.length-1);
-        let code3 = text.charCodeAt(15);
+        let text1 = "Hello";
+        let text2 = "world!";
+        let text3 = "Have a nice day!";
+        let result = text1.concat(" ", text2, " ", text3);
 
-        document.getElementById("example1").innerHTML = code;
-        document.getElementById("example2").innerHTML = code2;
-        document.getElementById("example3").innerHTML = code3;
+        document.getElementById("example1").innerHTML = result;
     </script>
 </body>
 </html>

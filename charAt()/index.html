@@ -4,32 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>charAt()</title>
+    <title>JS String Method .chatAt()</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <h1>JavaScript String charAt()</h1>
-    <pre>
-        Def:
-            The charAt() method
-                returns the character at a specified index (position) in a string.
-                    the index position is <strong>required</strong>
-            So attach the method to
-                an expression thats a string data type
-                    put an index number in the parenthasis
-                        and you get back the letter at that index
-        <b>Syntax</b>
-            <i>string.</i>charAt(index)
+    <div class="header">
+        <h1><u>JavaScript String Method</u>: <mark>.charAt()</mark></h1>
+    </div>
 
-            <p id="ex1"></p>
-            <p id="ex2"></p>
-    </pre>
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>this method method returns the character at a specified index (position) in a string.</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><b><i>string.chatAt(index)</i></b></p>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+                <table class="parameters" style="padding-bottom: 10px;">
+                    <caption><b>Parameters</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>index</td>
+                            <td>
+                                Optional. <br>
+                                The index (position) of the character. <br>
+                                Default = 0.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table style="padding-top: 10px;">
+                    <caption><b>Return Value</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>String</td>
+                            <td>
+                                The character at the specified index. 
+                                Empty string ("") if the index is out of range.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li><mark>charAt()</mark> is an ECMAScript1 (ES1) feature.</li>
+                <li>ES1 (JavaScript 1997) is fully supported in all browsers</li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="https://www.w3schools.com/jsref/jsref_charat.asp">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                let text = "hello world";   <br>
+                                let letter = text.charAt(3);    <br>
+                                let letter2 = text.charAt(text.length-1);   <br>
+                                let letter3 = text.chatAt(15);   <br>
+                                let letter4 = text.charAt();    <br>
+                                <br>
+                                <br>
+                                document.getElementById ("example1").innerHTML = letter; <br>
+                                document.getElementById ("example2").innerHTML = letter2;    <br>
+                                document.getElementById ("example3").innerHTML = letter3; <br>
+                                document.getElementById ("example4").innerHTML = letter4;    <br>
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                    <li><span id="example3"></span></li>
+                    <li><span id="example4"></span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
     <script>
         let text = "hello world";
         let letter = text.charAt(3);
         let letter2 = text.charAt(text.length-1);
+        // let letter3 = text.chatAt(15);
+        let letter4 = text.charAt();
+        
 
-        document.getElementById("ex1").innerHTML = letter;
-        document.getElementById("ex2").innerHTML = letter2;
+        document.getElementById("example1").innerHTML = letter;
+        document.getElementById("example2").innerHTML = letter2;
+        // document.getElementById("example3").innerHTML = letter3;
+        document.getElementById("example4").innerHTML = letter4;
     </script>
 </body>
 </html>

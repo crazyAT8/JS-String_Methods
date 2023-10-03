@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Strign Method .charCode()</title>
+    <title>JS String Method .codePointAt()</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -12,19 +12,19 @@
 </head>
 <body>
     <div class="header">
-        <h1><u>JavaScript String Method</u>: <mark>.charCode()</mark></h1>
+        <h1><u>JavaScript String Method</u>: <mark>.codePointAt()</mark></h1>
     </div>
 
     <div class="row">
         <div class="col-4 def">
             <ul><b><u>Definition</u>:</b>
-                <li>this method returns the Unicode of the character at a specified index (position) in a string.</li>
+                <li>this method returns the Unicode value at an index (position) in a string</li>
             </ul>
         </div>
 
         <div class="col-4 syntax">
             <h1><u><i>Syntax</i></u></h1>
-            <p><b><i>string.charCodeAt(index)</i></b></p>
+            <p><b><i>string.codePointAt(index)()</i></b></p>
         </div>
 
         <div class="col-4">
@@ -41,8 +41,8 @@
                         <tr>
                             <td>index</td>
                             <td>
-                                Optional. A number. <br>
-                                The index (position) of a character. <br>
+                                Optional.<br>
+                                The index (position) in a the string. <br>
                                 Default value = 0.
                             </td>
                         </tr>
@@ -59,10 +59,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>A number</td>
-                            <td>The Unicode of the character at the specified index. NaN if the index is invalid.</td>
+                            <td>Number</td>
+                            <td>The code point value at the specified index. <mark>undefined</mark> if the index is invalid.</td>
                         </tr>
                     </tbody>
+
                 </table>
             </div>
         </div>
@@ -76,12 +77,13 @@
                         <li>Both methods return an integer representing the UTF-16 code of a character, but only <mark>codePointerAt()</mark> can return the full value of a Unicode value greater 0xFFFF (65535).</li>
                     </ul>
                 </li>
-                <li><mark>charCodeAt()</mark> is an ECMAScript1 (ES1) feature.</li>
-                <li>ES1 (JavaScript 1997) is fully supported in all browsers.</li>
+                <li><mark>codePointAt()</mark> is an ECMAScript (ES6) feature.</li>
+                <li>ES6 (JavaScript 2015) is supported in all modern browsers.</li>
+                <li><mark>codePointAt()</mark> is not supported in Internet Explorer 11 (or earlier)</li>
             </ul>
             <ul><b><u>Reference</u>:</b>
                 <li>
-                    <a href="https://www.w3schools.com/jsref/jsref_charcodeat.asp">W3schools</a>
+                    <a href="">W3schools</a>
                 </li>
             </ul>
         </div>
@@ -93,14 +95,7 @@
                     <h4><b><u>Code</u>:</b></h4>
                         <p class="examples">
                             <code>
-                                let text = "HELLO WORLD";                       <br>
-                                let code = text.charCodeAt(0);                  <br>
-                                let code2 = text.charCodeAt(text.length-1);     <br>
-                                let code3 = text.charCodeAt(15);                <br>
-                                <br>
-                                document.getElementById ("example1").innerHTML = code;   <br>
-                                document.getElementById ("example2").innerHTML = code2;  <br>
-                                document.getElementById ("example3").innerHTML = code3;  <br>
+                                
                             </code>
                         </p>
                 </div>
@@ -111,6 +106,7 @@
                     <li><span id="example1"></span></li>
                     <li><span id="example2"></span></li>
                     <li><span id="example3"></span></li>
+                    <li><span id="example4"></span></li>
                 </ol>
             </div>
         </div>
@@ -118,13 +114,15 @@
 
     <script>
         let text = "HELLO WORLD";
-        let code = text.charCodeAt(0);
-        let code2 = text.charCodeAt(text.length-1);
-        let code3 = text.charCodeAt(15);
+        let code = text.codePointAt(0);
+        let code2 = text.codePointAt(1);
+        let code3 = text.charCodeAt(text.length-1);
+        let code4 = text.codePointAt(15);
 
         document.getElementById("example1").innerHTML = code;
         document.getElementById("example2").innerHTML = code2;
         document.getElementById("example3").innerHTML = code3;
+        document.getElementById("example4").innerHTML = code4;
     </script>
 </body>
 </html>
