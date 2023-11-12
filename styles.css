@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@200;500&family=Poppins:wght@100;200;300;400;700&family=Rubik+Mono+One&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -14,7 +16,7 @@
     padding: 15px;
 }
 html {
-    font-family: "Montserrart", sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 10px;
     border: 1px solid black;
     border-radius: 16px;
@@ -82,6 +84,24 @@ table, caption, td, th, thead, tbody, tr {
 .examples {
     margin: 0;
     padding: 0;
+}
+
+b, u {
+    font-family: 'Rubik Mono One', monospace;
+    font-weight: 500;
+    font-size: medium;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 255, 0.589);
+}
+
+mark {
+    /* background-color: rgba(246, 71, 202, 0.991); */
+    background: linear-gradient(318.32deg, #e815dd 10%, #efebee 55%, #f764e3 100%);
+    color: white;
+    border-radius: 5px;
 }
 
 /* For mobile phone */

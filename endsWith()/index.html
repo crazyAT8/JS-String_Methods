@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@200;500&family=Poppins:wght@100;200;300;400;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -25,7 +28,7 @@
 
         <div class="col-4 syntax">
             <h1><u><i>Syntax</i></u></h1>
-            <p><b><i>string.endsWith(searchvalue, Length)</i></b></p>
+            <p><i>string.endsWith (searchvalue, Length)</i></p>
         </div>
 
         <div class="col-4">
@@ -96,7 +99,14 @@
                     <h4><b><u>Code</u>:</b></h4>
                         <p class="examples">
                             <code>
-                                
+                                let text = "Hello world";<br>
+                                let result = text.endsWith("world");<br>
+                                let result2 = text.endsWith("World!");<br>
+                                let result3 = text.endsWith("world", 11);<br>
+                                <br>
+                                document.getElementById("example1") .innerHTML = result;<br>
+                                document.getElementById("example2") .innerHTML = result2;<br>
+                                document.getElementById("example3") .innerHTML = result3;<br>
                             </code>
                         </p>
                 </div>
@@ -105,13 +115,22 @@
             <div class="col-5 footer">
                 <ol><b><u>Result:</u></b>
                     <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                    <li><span id="example3"></span></li>
                 </ol>
             </div>
         </div>
     </div>
 
     <script>
-        
+        let text = "Hello world";
+        let result = text.endsWith("world");
+        let result2 = text.endsWith("World!");
+        let result3 = text.endsWith("world", 11);
+
+        document.getElementById("example1").innerHTML = result;
+        document.getElementById("example2").innerHTML = result2;
+        document.getElementById("example3").innerHTML = result3;
     </script>
 </body>
 </html>
