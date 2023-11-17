@@ -104,6 +104,10 @@ mark {
     border-radius: 5px;
 }
 
+i {
+    font-weight: 600;
+}
+
 /* For mobile phone */
 [class*="col-"] {
     width: 100%;
