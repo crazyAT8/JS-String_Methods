@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Property length</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>JavaScript String Property</u>: <mark>length</mark></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>this property returns the length of a string.</li>
+                <li>The length property of an empty string is 0.</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><i>string.length</i></p>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+                <table style="padding-top: 10px;">
+                    <caption><b>Return Value</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A number</td>
+                            <td>The length of the string.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li><mark>length</mark> is an ECMAScript1 (ES1) feature.</li>
+                <li>ES1 (JavaScript 1997) is fully supported in all browsers.</li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="https://www.w3schools.com/jsref/jsref_length_string.asp">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                let text = "Hello World!";                              <br>
+                                let length = text.length;                               <br>
+                        <br>
+                                document.getElementById ("example1").innerHTML = length;
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let text = "Hello World!";
+        let length = text.length;
+
+        document.getElementById("example1").innerHTML = length;
+    </script>
+</body>
+</html>
