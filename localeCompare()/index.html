@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Method localeCompare()</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>JavaScript String Method</u>: <mark>.localeCompare()</mark></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>this method compares two strings in the current locale.</li>
+                <li>this method returns sort order -1, 1, or 0 (for before, after, or equal).</li>
+                <li>The current locale is based on the language setting of the browser.</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><i>string.localeCompare (compareString)</i></p>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+                <table class="parameters" style="padding-bottom: 10px;">
+                    <caption><b>Parameters</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>compareString</td>
+                            <td>
+                                Required.<br>
+                                The string to compare with.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table style="padding-top: 10px;">
+                    <caption><b>Return Value</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A number</td>
+                            <td>
+                                One of 3 values:<br>
+                                <ol>
+                                    <li> -1 if the string is sorted before the compareString</li>
+                                    <li>0 if the two strings are equal</li>
+                                    <li>1 if the string is sorted after the compareString</li>
+                                </ol>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li><mark>localeCompare()</mark> is a ECMAScript (ES1) feature.</li>
+                <li>ES1 (JavaScript 1997) is fully supported in all browsers</li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="https://www.w3schools.com/jsref/jsref_localecompare.asp">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                let text1 = "ab";                                           <br>
+                                let text2 = "cd";                                           <br>
+                                let text3 = "ab";                                           <br>
+                                let text4 = "A";                                            <br>
+                                let text5 = "a";                                            <br>
+                                <br>
+                                let result1 = text1.localeCompare(text2);                   <br>
+                                let result2 = text2.localeCompare(text1);                   <br>
+                                let result3 = text1.localeCompare(text3);                   <br>
+                                let result4 = text4.localeCompare(text5);                   <br>
+                                <br>
+                                document.getElementById ("example1").innerHTML = result1;    <br>
+                                document.getElementById ("example2").innerHTML = result2;    <br>
+                                document.getElementById ("example3").innerHTML = result3;    <br>
+                                document.getElementById ("example4").innerHTML = result4;
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                    <li><span id="example3"></span></li>
+                    <li><span id="example4"></span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let text1 = "ab";
+        let text2 = "cd";
+        let text3 = "ab";
+        let text4 = "A";
+        let text5 = "a";
+
+        let result1 = text1.localeCompare(text2);
+        let result2 = text2.localeCompare(text1);
+        let result3 = text1.localeCompare(text3);
+        let result4 = text4.localeCompare(text5);
+
+        document.getElementById("example1").innerHTML = result1;
+        document.getElementById("example2").innerHTML = result2;
+        document.getElementById("example3").innerHTML = result3;
+        document.getElementById("example4").innerHTML = result4;
+    </script>
+</body>
+</html>
