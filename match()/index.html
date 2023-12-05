@@ -100,7 +100,16 @@
                     <h4><b><u>Code</u>:</b></h4>
                         <p class="examples">
                             <code>
-                                
+                                let text = "The rain in SPAIN stays mainly in the plain";                           <br>
+                                let result1 = text.match("ain");   // Search for "ain" using a string               <br>
+                                let result2 = text.match(/ain/);   // Search for "ain" using a regular expression   <br>
+                                let result3 = text.match(/ain/g);  // Global search for "ain"                       <br>
+                                let result4 = text.match(/ain/gi); // Global case-insensitve, search for "ain"      <br>
+                                <br>
+                                document.getElementById ("example1").innerHTML = result1;                            <br>
+                                document.getElementById ("example2").innerHTML = result2;                            <br>
+                                document.getElementById ("example3").innerHTML = result3;                            <br>
+                                document.getElementById ("example4").innerHTML = result4;
                             </code>
                         </p>
                 </div>
@@ -109,13 +118,25 @@
             <div class="col-5 footer">
                 <ol><b><u>Result:</u></b>
                     <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                    <li><span id="example3"></span></li>
+                    <li><span id="example4"></span></li>
                 </ol>
             </div>
         </div>
     </div>
 
     <script>
+        let text = "The rain in SPAIN stays mainly in the plain";
+        let result1 = text.match("ain");   // Search for "ain" using a string
+        let result2 = text.match(/ain/);   // Search for "ain" using a regular expression
+        let result3 = text.match(/ain/g);  // Global search for "ain"
+        let result4 = text.match(/ain/gi); // Global case-insensitve, search for "ain"
         
+        document.getElementById("example1").innerHTML = result1;
+        document.getElementById("example2").innerHTML = result2;
+        document.getElementById("example3").innerHTML = result3;
+        document.getElementById("example4").innerHTML = result4;
     </script>
 </body>
 </html>
