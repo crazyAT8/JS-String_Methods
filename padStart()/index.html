@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Method .padStart()</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>JavaScript String Method</u>: <mark>.padStart()</mark></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>this method pads the string from the start</li>
+                <li>this method pads a string with another string (multiple times) until it reaches a given length.</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><i>string.padStart(Length, string)</i></p>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+                <table class="parameters" style="padding-bottom: 10px;">
+                    <caption><b>Parameters</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>length</td>
+                            <td>
+                                Required. <br>
+                                The length of the resulting string.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>string</td>
+                            <td>
+                                Optional. <br>
+                                The string to pad with. <br>
+                                Default is space.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table style="padding-top: 10px;">
+                    <caption><b>Return Value</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A string</td>
+                            <td>A String of the specified length, with the padding applied from the start.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li>The <mark>padStart()</mark> method is a string method.<br>To pad a number, convert the number to a string first.</li>
+                <li><mark>padStart()</mark> is an ECMAScript7 (ES&) feature.</li>
+                <li>ES7 (JavaScript 2016) is supported in all modern browsers.</li>
+                <li><mark>padStart()</mark> is not supported in internet Explorer or Edge 17 (or earlier).</li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="https://www.w3schools.com/jsref/jsref_string_padstart.asp">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                let text1 = "1";                                                                <br>
+                                text1 = text1.padStart(4,"0");                                                  <br>
+                                <br>
+                                document.getElementById ("example1").innerHTML = text1;                          <br>
+                                <br>
+                                let text2 = "2";                                                                <br>
+                                document.getElementById ("example2").innerHTML = text2.padStart(4, "x");         <br>
+                                <br>
+                                let numb = 3;                                                                   <br>
+                                let text3 = numb.toString();                                                    <br>
+                                document.getElementById ("example3").innerHTML = text3.padStart(4, 0);
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                    <li><span id="example3"></span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let text1 = "1";
+        text1 = text1.padStart(4,"0");
+
+        document.getElementById("example1").innerHTML = text1;
+
+        let text2 = "2";
+        document.getElementById("example2").innerHTML = text2.padStart(4, "x");
+
+        let numb = 3;
+        let text3 = numb.toString();
+        document.getElementById("example3").innerHTML = text3.padStart(4, 0);
+    </script>
+</body>
+</html>
