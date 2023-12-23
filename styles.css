@@ -94,13 +94,13 @@ b, u {
 
 a {
     text-decoration: none;
-    color: rgba(0, 0, 255, 0.589);
+    color: rgba(0, 128, 255, 0.589);
 }
 
 mark {
     /* background-color: rgba(246, 71, 202, 0.991); */
-    background: linear-gradient(318.32deg, #5eccf4 10%, #afc3d7 55%, #43c5f4 100%);
-    color: white;
+    background: linear-gradient(318.32deg, #e6f01d 10%, #dfee7d 55%, #e7d80a 100%);
+    color: rgb(204, 15, 15);
     border-radius: 5px;
 }
 

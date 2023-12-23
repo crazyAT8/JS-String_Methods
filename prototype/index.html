@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Property Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>JavaScript String Property</u>: <mark>prototype</mark></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-6 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>this is a property available with all JavaScript objects.</li>
+                <li>this property allows you to add new properties and methods to strings.</li>
+            </ul>
+        </div>
+
+        <div class="col-6 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><i>object.prototype.name = value</i></p>
+        </div>
+    </div>
+
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li><mark>prototype</mark> is an ECMAScript1 (ES1) feature.</li>
+                <li>ES1 (JavaScript 1997) is fully supported in all browsers</li>
+                <li>
+                    <h4 style="margin: 0;">Warning</h4><br>
+                    You are not advised to change the prototype of an object that you do not control.<br>
+                    You should not change the prototype of built in JavaScript dataScript datatypes like: <br>
+                    <ul>
+                        <li>Numbers</li>
+                        <li>Strings</li>
+                        <li>Arrays</li>
+                        <li>Dates</li>
+                        <li>Booleans</li>
+                        <li>Functions</li>
+                        <li>Objects</li>
+                    </ul>
+                    Only change the prototype of your own objects.
+                </li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="https://www.w3schools.com/jsref/jsref_prototype_string.asp">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                function employee(name, jobtitle, born) {                               <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;this.name = name;                                                   <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;this.jobtitle = jobtitle;                                           <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;this.born = born;                                                   <br>
+                                }                                                                       <br>
+                                <br>
+                                employee.prototype.salary = 2000;                                       <br>
+                                <br>
+                                const fred = new employee("Fred Flinstone", "Caveman", 1970);           <br>
+                                document.getElementById ("example1").innerHTML = fred.salary;            <br>
+                                <br>
+                                function Person(first, last, age, eye) {                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;this.firstName = first;                             <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;this.lastName = last;                               <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;this.eyeColor = eye;                                <br>
+                                }                                                                       <br>
+                        <br>
+                                const myFather = new Person("John", "Doe", "blue");                     <br>
+                                const myMother = new Person("Sally", "Rally", "green");                 <br>
+                        <br>
+                                Person.prototype.nationality = "American";                               <br>
+                        <br>
+                                document.getElementById ("example2").innerHTML =                         <br>
+                                "My father is " + myFather.nationality + "&lt;br&gt;" +                  <br>
+                                "My mother is " + myMother.nationality;                                 <br>
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function employee(name, jobtitle, born) {
+            this.name = name;
+            this.jobtitle = jobtitle;
+            this.born = born;
+        }
+
+        employee.prototype.salary = 2000;
+
+        const fred = new employee("Fred Flinstone", "Caveman", 1970);
+        document.getElementById("example1").innerHTML = fred.salary;
+
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.eyeColor = eye;
+        }
+
+        const myFather = new Person("John", "Doe", "blue");
+        const myMother = new Person("Sally", "Rally", "green");
+
+        Person.prototype.nationality = "English";
+
+        document.getElementById("example2").innerHTML =
+        "My father is " + myFather.nationality + "<br>" +
+        "My mother is " + myMother.nationality;
+    </script>
+</body>
+</html>
