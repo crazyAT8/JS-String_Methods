@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>JS string method .repeat()</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -12,20 +12,21 @@
 </head>
 <body>
     <div class="header">
-        <h1><u>JavaScript String Method</u>: <mark></mark></h1>
+        <h1><u>JavaScript String Method</u>: <mark>.repeat()</mark></h1>
     </div>
 
     <div class="row">
         <div class="col-4 def">
             <ul><b><u>Definition</u>:</b>
-                <li>this method </li>
-                <li>this method</li>
+                <li>this method returns a string with a number of copies of a string.</li>
+                <li>this method returns a new string.</li>
+                <li>this method does not change the original string.</li>
             </ul>
         </div>
 
         <div class="col-4 syntax">
             <h1><u><i>Syntax</i></u></h1>
-            <p><i>string.()</i></p>
+            <p><i>string.repeat(count)</i></p>
         </div>
 
         <div class="col-4">
@@ -40,16 +41,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
+                            <td>count</td>
+                            <td>
+                                Required. <br>
+                                The number of copies.
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -64,8 +60,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <td>A string</td>
+                            <td>The copies of the original string.</td>
                         </tr>
                     </tbody>
 
@@ -75,11 +71,13 @@
     </div>
         <div class="footer">
             <ul><b><u>Notes</u>:</b>
-                <li></li>
+                <li><mark>repeat()</mark> is an ECMAScript (ES6) feature.</li>
+                <li>ES6 (JavaScript 2015) is supported in all modern browsers</li>
+                <li><mark>repeat()</mark> is not supported in Internet Explorer 11 (or earlier)</li>
             </ul>
             <ul><b><u>Reference</u>:</b>
                 <li>
-                    <a href="">W3schools</a>
+                    <a href="https://www.w3schools.com/jsref/jsref_repeat.asp">W3schools</a>
                 </li>
             </ul>
         </div>
@@ -91,7 +89,12 @@
                     <h4><b><u>Code</u>:</b></h4>
                         <p class="examples">
                             <code>
-                                
+                                let text1 = "Some words ";                                          <br>
+                                let repeat1 = text1.repeat(2);                                      <br>
+                                let repeat2 = text1.repeat(4);                                      <br>
+                        <br>
+                                document.getElementById ("example1").innerHTML = repeat1;            <br>
+                                document.getElementById ("example2").innerHTML = repeat2;
                             </code>
                         </p>
                 </div>
@@ -100,13 +103,19 @@
             <div class="col-5 footer">
                 <ol><b><u>Result:</u></b>
                     <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
                 </ol>
             </div>
         </div>
     </div>
 
     <script>
-        
+        let text1 = "Some words ";
+        let repeat1 = text1.repeat(2);
+        let repeat2 = text1.repeat(4);
+
+        document.getElementById("example1").innerHTML = repeat1;
+        document.getElementById("example2").innerHTML = repeat2;
     </script>
 </body>
 </html>
