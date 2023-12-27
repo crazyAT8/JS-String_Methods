@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Method .replace()</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>JavaScript String Method</u>: <mark>.replace()</mark></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>this method searches a string for a value or a regular expression.</li>
+                <li>this method returns a new string with the value(s) replaced.</li>
+                <li>this method does not change the original string</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><i>string.replace(searchValue, newValue)</i></p>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+                <table class="parameters" style="padding-bottom: 10px;">
+                    <caption><b>Parameters</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>searchValue</td>
+                            <td>
+                                Required. <br>
+                                The value, or regular expression, to search for.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>newValue</td>
+                            <td>
+                                Required. <br>
+                                The new value (to replace with).
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table style="padding-top: 10px;">
+                    <caption><b>Return Value</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A string</td>
+                            <td>A new string where the specified value(s) has been replaced.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li>If you replace a value, only the first instance will be replaced. To replace all instances, use a regular expression with the g modifier set.</li>
+                <li><mark>replace()</mark> is an ECMAScript (ES1) feature.</li>
+                <li>ES1 (JavaScript 1997) is fully supported in all browsers</li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="https://www.w3schools.com/jsref/jsref_replace.asp">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                let text1 = document.getElementById ("example1").innerHTML;                                         <br>
+                                document.getElementById ("example1").innerHTML = text1.replace("Arizona", "Nebraska")               <br>
+                                <br>
+                                // A global replacement                                                                             <br>
+                                let str = document.getElementById ("example2").innerHTML;                                           <br>
+                                let res = str.replace (/blue/g, "red");                                                             <br>
+                                document.getElementById ("example2").innerHTML = res;                                               <br>
+                                <br>
+                                // A global, case-insensitive replacement                                                           <br>
+                                let text2 = document.getElementById ("example3").innerHTML;                                         <br>
+                                let result1 = text2.replace (/blue/gi, "red");                                                      <br>
+                                document.getElementById ("example3").innerHTML = result1;                                           <br>
+                                <br>
+                                // A function to return the replacement text                                                        <br>
+                                let text3 = document.getElementById ("example4").innerHTML;                                         <br>
+                                let result2 = text3.replace (/blue|house|car/gi, function (x) {                                     <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;return x.toUpperCase();                                                         <br>
+                                });                                                                                                 <br>
+                                <br>
+                                document.getElementById ("example4").innerHTML = result2;   
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1">Visit Arizona</span></li>
+                    <li><span id="example2">Mr Blue has a blue house and a blue car.</span></li>
+                    <li><span id="example3">Mr Blue has a blue house and a blue car.</span></li>
+                    <li><span id="example4">Mr Blue has a blue house and a blue car.</span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let text1 = document.getElementById("example1").innerHTML;
+        document.getElementById("example1").innerHTML = text1.replace("Arizona", "Nebraska")
+
+        // A global replacement
+        let str = document.getElementById("example2").innerHTML;
+        let res = str.replace(/blue/g, "red");
+        document.getElementById("example2").innerHTML = res;
+
+        // A global, case-insensitive replacement
+        let text2 = document.getElementById("example3").innerHTML;
+        let result1 = text2.replace(/blue/gi, "red");
+        document.getElementById("example3").innerHTML = result1;
+
+        // A function to return the replacement text
+        let text3 = document.getElementById("example4").innerHTML;
+        let result2 = text3.replace(/blue|house|car/gi, function (x) {
+            return x.toUpperCase();
+        });
+
+        document.getElementById("example4").innerHTML = result2;
+    </script>
+</body>
+</html>
