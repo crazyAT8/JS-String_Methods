@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Method .replaceAll()</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>JavaScript String Method</u>: <mark>.replaceAll()</mark></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>this method searches a string for a calue or a regular expression.</li>
+                <li>this method returns a new string with all values replaced.</li>
+                <li>this method does not change the original string.</li>
+                <li>this method was introduced in JavaScript 2021.</li>
+                <li>this method does not work in Internet Explorer.</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><i>string.replaceAll(searchValue, newValue)</i></p>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+                <table class="parameters" style="padding-bottom: 10px;">
+                    <caption><b>Parameters</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>searchValue</td>
+                            <td>
+                                Required. <br>
+                                The value, or regular expression, to search for.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>newValue</td>
+                            <td>
+                                Required. <br>
+                                The new value (to replace with). <br>
+                                This parameter can be a JavaScript function.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table style="padding-top: 10px;">
+                    <caption><b>Return Value</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A string</td>
+                            <td>A new string where the search values has been replaced.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li>If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.</li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="https://www.w3schools.com/jsref/jsref_string_replaceall.asp">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                // String                                                                                           <br>
+                                let text1 = "I love cats. Cats are very easy to love. Cats are very popular."                       <br>
+                                text1 = text1.replaceAll("Cats","Dogs");                                                            <br>
+                                text1 = text1.replaceAll("cats","dogs");                                                            <br>
+                        <br>
+                                document.getElementById ("example1").innerHTML = text1;                                              <br>
+                        <br>
+                                // Regular Expression                                                                               <br>
+                                let text2 = "I love cats too. Cats are very easy to love as well. Cats are popular";                <br>
+                                text2 = text2.replaceAll (/Cats/g,"Dogs");                                                           <br>
+                                text2 = text2.replaceAll (/cats/g,"dogs");                                                           <br>
+                        <br>
+                                document.getElementById ("example2").innerHTML = text2;                                              <br>
+                        <br>
+                                // Global, case-insensitive replacement                                                             <br>
+                                let text3 = document.getElementById ("example3").innerHTML;                                          <br>
+                                let result3 = text3.replaceAll (/blue/gi, "red");                                                    <br>
+                                document.getElementById ("example3").innerHTML = result3;                                            <br>
+                        <br>
+                                // A function to return the replacement text                                                        <br>
+                                let text4 = document.getElementById ("example4").innerHTML;                                          <br>
+                                let result4 = text4.replaceAll (/green|house|car/gi, function (x) {                                  <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;return x.toUpperCase();                                                         <br>
+                                });                                                                                                 <br>
+                        <br>
+                                document.getElementById ("example4").innerHTML = result4;
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                    <li><span id="example3">Mr Blue has a blue house an a blue car.</span></li>
+                    <li><span id="example4">Mr Green has a green house an a green car.</span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // String
+        let text1 = "I love cats. Cats are very easy to love. Cats are very popular."
+        text1 = text1.replaceAll("Cats","Dogs");
+        text1 = text1.replaceAll("cats","dogs");
+
+        document.getElementById("example1").innerHTML = text1;
+
+        // Regular Expression 
+        let text2 = "I love cats too. Cats are very easy to love as well. Cats are popular";
+        text2 = text2.replaceAll(/Cats/g,"Dogs");
+        text2 = text2.replaceAll(/cats/g,"dogs");
+
+        document.getElementById("example2").innerHTML = text2;
+
+        // Global, case-insensitive replacement
+        let text3 = document.getElementById("example3").innerHTML; 
+        let result3 = text3.replaceAll(/blue/gi, "red");
+        document.getElementById("example3").innerHTML = result3;
+
+        // A function to return the replacement text
+        let text4 = document.getElementById("example4").innerHTML; 
+        let result4 = text4.replaceAll(/green|house|car/gi, function (x) {
+            return x.toUpperCase();
+        });
+
+        document.getElementById("example4").innerHTML = result4;
+    </script>
+</body>
+</html>
