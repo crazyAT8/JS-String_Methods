@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Method .search()</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>JavaScript String Method</u>: <mark>.search()</mark></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>this method matches a string against a regular expression.</li>
+                <li>this method returns the index (position) of the first match.</li>
+                <li>this method returns -1 if no match is found.</li>
+                <li>this method is case sensitive.</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><i>string.search(searchValue)</i></p>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+                <table class="parameters" style="padding-bottom: 10px;">
+                    <caption><b>Parameters</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>searchValue</td>
+                            <td>
+                                Required. <br>
+                                The search value. <br>
+                                A regular expression (or a string that will be converted to a regular expression).
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table style="padding-top: 10px;">
+                    <caption><b>Return Value</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A number</td>
+                            <td>
+                                The position of the first match. <br>
+                                -1 if no match.
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li>If the search value is a string, it is converted to a regular expression.</li>
+                <li><mark>search()</mark> is an ECMAScript (ES1) feature.</li>
+                <li>ES1 (JavaScript 1997) if fully supported in all browsers.</li>
+                <li>
+                    <ul><b><u>The Difference Between String search() and String indexOf()</u></b>
+                        <li><mark>search()</mark> cannot take a start position argument.</li>
+                        <li><mark>indexOf()</mark> method cannot search against a regular expression.</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul><b><u>The Difference Between String search() and String match()</u></b>
+                        <li><mark>search()</mark> method returns the position of the first match.</li>
+                        <li><mark>indexOf()</mark> method returns any array of matches.</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul><b><u>Regular Expression Search Methods</u></b>
+                        <li>In JavaScript, a regular expression text search, can be done with different methods. With a pattern as a regular espression, these are the most common methods:</li>
+                        <li>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Example</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>text.match (pattern)</td>
+                                        <td>The String method match()</td>
+                                    </tr>
+                                    <tr>
+                                        <td>text.search (pattern)</td>
+                                        <td>The String method search()</td>
+                                    </tr>
+                                    <tr>
+                                        <td>pattern.exec (text)</td>
+                                        <td>The RexExp method exec()</td>
+                                    </tr>
+                                    <tr>
+                                        <td>pattern.test (text)</td>
+                                        <td>The RegExp method test()</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="https://www.w3schools.com/jsref/jsref_search.asp">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                let text1 = "Mr. Blue has a blue house"                             <br>
+                                let position1 = text1.search("Blue");                               <br>
+                                let position2 = text1.search(/Blue/);                               <br>
+                                let position3 = text1.search("blue");                               <br>
+                                let position4 = text1.search(/blue/);                               <br>
+                                let position5 = text1.search(/blue/i);                              <br>
+                                <br>
+                                document.getElementById ("example1").innerHTML = position1;          <br>
+                                document.getElementById ("example2").innerHTML = position2;          <br>
+                                document.getElementById ("example3").innerHTML = position3;              <br>
+                                document.getElementById ("example4").innerHTML = position4;          <br>
+                                document.getElementById ("example5").innerHTML = position5;      
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                    <li><span id="example3"></span></li>
+                    <li><span id="example4"></span></li>
+                    <li><span id="example5"></span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let text1 = "Mr. Blue has a blue house"
+        let position1 = text1.search("Blue");
+        let position2 = text1.search(/Blue/);
+        let position3 = text1.search("blue");
+        let position4 = text1.search(/blue/);
+        let position5 = text1.search(/blue/i);
+
+        document.getElementById("example1").innerHTML = position1;
+        document.getElementById("example2").innerHTML = position2;
+        document.getElementById("example3").innerHTML = position3;
+        document.getElementById("example4").innerHTML = position4;
+        document.getElementById("example5").innerHTML = position5;
+    </script>
+</body>
+</html>
