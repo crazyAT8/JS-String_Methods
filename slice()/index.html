@@ -30,14 +30,12 @@
         <div class="col-4 syntax">
             <h1><u><i>Syntax</i></u></h1>
             <p><i>string.slice(start, end)</i></p>
-            <br>
             <h4><i>Similar to:</i></h4>
             <ul>
                 <li>.split()</li>
                 <li>.substr()</li>
                 <li>.substring()</li>
             </ul>
-
         </div>
 
         <div class="col-4">
@@ -91,7 +89,8 @@
     </div>
         <div class="footer">
             <ul><b><u>Notes</u>:</b>
-                <li></li>
+                <li><mark>slice()</mark> is an ECMAScript1 (ES1) feature</li>
+                <li>ES1 (JavaScript 1997) is fully supported in all browsers</li>
             </ul>
             <ul><b><u>Reference</u>:</b>
                 <li>
@@ -107,7 +106,21 @@
                     <h4><b><u>Code</u>:</b></h4>
                         <p class="examples">
                             <code>
-                                
+                                let text1 = "Hello world!";                                                                 <br>
+        <br>
+                                let result1 = text1.slice(0, 5);    // First word                                           <br>
+                                let result2 = text1.slice(3);       // whole sting except for the first three letters       <br>
+                                let result3 = text1.slice(3, 8);                                                            <br>
+                                let result4 = text1.slice(0, 1);    // First character                                      <br>
+                                let result5 = text1.slice(-1);      // Last character                                       <br>
+                                let result6 = text1.slice(0);       // Whole string                                         <br>
+                        <br>
+                                document.getElementById ("example1").innerHTML = result1;                                    <br>
+                                document.getElementById ("example2").innerHTML = result2;                                    <br>
+                                document.getElementById ("example3").innerHTML = result3;                                    <br>
+                                document.getElementById ("example4").innerHTML = result4;                                    <br>
+                                document.getElementById ("example5").innerHTML = result5;                                    <br>
+                                document.getElementById ("example6").innerHTML = result6;                                    
                             </code>
                         </p>
                 </div>
@@ -116,13 +129,32 @@
             <div class="col-5 footer">
                 <ol><b><u>Result:</u></b>
                     <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                    <li><span id="example3"></span></li>
+                    <li><span id="example4"></span></li>
+                    <li><span id="example5"></span></li>
+                    <li><span id="example6"></span></li>
                 </ol>
             </div>
         </div>
     </div>
 
     <script>
-        
+        let text1 = "Hello world!";
+
+        let result1 = text1.slice(0, 5);    // First word
+        let result2 = text1.slice(3);       // whole sting except for the first three letters
+        let result3 = text1.slice(3, 8);
+        let result4 = text1.slice(0, 1);    // First character
+        let result5 = text1.slice(-1);      // Last character
+        let result6 = text1.slice(0);       // Whole string
+
+        document.getElementById("example1").innerHTML = result1;
+        document.getElementById("example2").innerHTML = result2;
+        document.getElementById("example3").innerHTML = result3;
+        document.getElementById("example4").innerHTML = result4;
+        document.getElementById("example5").innerHTML = result5;
+        document.getElementById("example6").innerHTML = result6;
     </script>
 </body>
 </html>
