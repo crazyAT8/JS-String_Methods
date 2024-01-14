@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS String Method .substr()</title>
+    <title>JS String Method .substring()</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -12,27 +12,28 @@
 </head>
 <body>
     <div class="header">
-        <h1><u>JavaScript String Method</u>: <mark>.substr()</mark></h1>
+        <h1><u>JavaScript String Method</u>: <mark>.substring()</mark></h1>
     </div>
 
     <div class="row">
         <div class="col-4 def">
             <ul><b><u>Definition</u>:</b>
-                <li>this method extracts a part of a string.</li>
-                <li>this method begins at a specified position, and returns a specified number of characters.</li>
-                <li>this method does not change the original string.</li>
-                <li>To extract characters from the end of the string, use a negative start position.</li>
+                <li>this method extracts characters, between two indices (positions), from a string, and returns the substring.</li>
+                <li>this method extracts characters from start to end (exclusive).</li>
+                <li>this method does not chan ge the original string.</li>
+                <li>If start is greater than end, arguments are swapped: (4, 1) = (1, 4).</li>
+                <li>Start or end values less than 0, are treated as 0.</li>
             </ul>
         </div>
 
         <div class="col-4 syntax">
             <h1><u><i>Syntax</i></u></h1>
-            <p><i>string.substr(start, length)</i></p>
+            <p><i>string.substring(start, end)</i></p>
             <h4><i>Similar to:</i></h4>
             <ul>
-                <li>.split() method</li>
-                <li>.slice() method</li>
-                <li>.substring() method</li>
+                <li>.split() Method</li>
+                <li>.slice() Method</li>
+                <li>.substr() Method</li>
             </ul>
         </div>
 
@@ -51,19 +52,16 @@
                             <td>start</td>
                             <td>
                                 Required. <br>
-                                The start position. <br>
-                                First character is at index 0. <br>
-                                <br>
-                                If start is greater than the length, substr() returns "". <br>
-                                Is star is negative, substr() sounts from the end of the string.
+                                Start position. <br>
+                                First character is at index 0.
                             </td>
                         </tr>
                         <tr>
-                            <td>length</td>
+                            <td>end</td>
                             <td>
                                 Optional. <br>
-                                The number of characters to extract. <br>
-                                If omitted, it extracts the rest of the string
+                                End position (up to, but not including).
+                                If omitted: the rest of the string.
                             </td>
                         </tr>
                     </tbody>
@@ -80,10 +78,7 @@
                     <tbody>
                         <tr>
                             <td>A string</td>
-                            <td>
-                                A string containing the extracted part. <br>
-                                If length is 0 or negative, an empty string is returned.
-                            </td>
+                            <td>A string containing the extracted characters.</td>
                         </tr>
                     </tbody>
 
@@ -93,12 +88,12 @@
     </div>
         <div class="footer">
             <ul><b><u>Notes</u>:</b>
-                <li><mark>substr()</mark> is an ECMAScript1 (ES1) feature.</li>
-                <li>ES1 (JavaScript) is fully supported in all browsers.</li>
+                <li><mark>substring()</mark> is an ECMAScript1 (ES1) feature.</li>
+                <li>ES1 (JavaScript 1997) if fully supported in all browsers</li>
             </ul>
             <ul><b><u>Reference</u>:</b>
                 <li>
-                    <a href="https://www.w3schools.com/jsref/jsref_substr.asp">W3schools</a>
+                    <a href="https://www.w3schools.com/jsref/jsref_substring.asp">W3schools</a>
                 </li>
             </ul>
         </div>
@@ -110,19 +105,21 @@
                     <h4><b><u>Code</u>:</b></h4>
                         <p class="examples">
                             <code>
-                                let text1 = "Hello World";                                          <br>
+                                let text1 = "Hello World!";                                 <br>
                                 <br>
-                                let result1 = text1.substr(1, 4);                               <br>
-                                let result2 = text1.substr(2);                               <br>
-                                let result3 = text1.substr(0, 1);                               <br>
-                                let result4 = text1.substr(text.length-1, 1);                               <br>
-                                let result5 = text1.substr(-6, 6);                               <br>
+                                let result1 = text1.substring(1, 4);                         <br>
+                                let result2 = text1.substring(2);                            <br>
+                                let result3 = text1.substring(4, 1);                         <br>
+                                let result4 = text1.substring(-1);                           <br>
+                                let result5 = text1.substring(0, 1);                        <br>
+                                let result6 = text1.substring(text1.length - 1);            <br>
                                 <br>
-                                document.getElementById ("example1").innerHTML = result1;                               <br>
-                                document.getElementById ("example2").innerHTML = result2;                               <br>
-                                document.getElementById ("example3").innerHTML = result3;                               <br>
-                                document.getElementById ("example4").innerHTML = result4;                               <br>
-                                document.getElementById ("example5").innerHTML = result5;
+                                document.getElementById ("example1").innerHTML = result1;   <br>
+                                document.getElementById ("example2").innerHTML = result2;   <br>
+                                document.getElementById ("example3").innerHTML = result3;   <br>
+                                document.getElementById ("example4").innerHTML = result4;   <br>
+                                document.getElementById ("example5").innerHTML = result5;   <br>
+                                document.getElementById ("example6").innerHTML = result6;
                             </code>
                         </p>
                 </div>
@@ -135,24 +132,28 @@
                     <li><span id="example3"></span></li>
                     <li><span id="example4"></span></li>
                     <li><span id="example5"></span></li>
+                    <li><span id="example6"></span></li>
                 </ol>
             </div>
         </div>
     </div>
 
     <script>
-        let text1 = "Hello World";
-        let result1 = text1.substr(1, 4);
-        let result2 = text1.substr(2);
-        let result3 = text1.substr(0, 1);
-        let result4 = text1.substr(text1.length-1, 1);
-        let result5 = text1.substr(-6, 6);
+        let text1 = "Hello World!";
+
+        let result1 = text1.substring(1, 4);
+        let result2 = text1.substring(2);
+        let result3 = text1.substring(4, 1);
+        let result4 = text1.substring(-1);
+        let result5 = text1.substring(0, 1);
+        let result6 = text1.substring(text1.length - 1);
 
         document.getElementById("example1").innerHTML = result1;
         document.getElementById("example2").innerHTML = result2;
         document.getElementById("example3").innerHTML = result3;
         document.getElementById("example4").innerHTML = result4;
         document.getElementById("example5").innerHTML = result5;
+        document.getElementById("example6").innerHTML = result6;
     </script>
 </body>
 </html>
