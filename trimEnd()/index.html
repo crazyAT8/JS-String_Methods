@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>JS String Methods .trimEnd()</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -12,23 +12,27 @@
 </head>
 <body>
     <div class="header">
-        <h1><u>JavaScript String Method</u>: <mark></mark></h1>
+        <h1><u>JavaScript String Method</u>: <mark>.trimEnd()</mark></h1>
     </div>
 
     <div class="row">
         <div class="col-4 def">
             <ul><b><u>Definition</u>:</b>
-                <li>this method</li>
-                <li>this method</li>
+                <li>this method removes whitespace from the end of a string.</li>
+                <li>this method does not change the original string.</li>
+                <li>this method works like <mark>.trim()</mark>, but removes whitespace only from the end of a string.</li>
             </ul>
         </div>
 
         <div class="col-4 syntax">
             <h1><u><i>Syntax</i></u></h1>
-            <p><i>string.()</i></p>
+            <p><i>string.trimEnd()</i></p>
             <h4><i>Similar to:</i></h4>
             <ul>
-                <li></li>
+                <li>trim()</li>
+                <li>trimStart()</li>
+                <li>padEnd()</li>
+                <li>padStart()</li>
             </ul>
         </div>
 
@@ -43,7 +47,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td>NONE</td>
                         </tr>
                     </tbody>
                 </table>
@@ -58,8 +62,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <td>A string</td>
+                            <td>A string with removed whitespace from the end of the string.</td>
                         </tr>
                     </tbody>
 
@@ -69,11 +73,12 @@
     </div>
         <div class="footer">
             <ul><b><u>Notes</u>:</b>
-                <li></li>
+                <li>The <mark>trimEnd()</mark> method was added to JavaScript in ECMAScript 2019.</li>
+                <li>Supported in all browsers since January 2020.</li>
             </ul>
             <ul><b><u>Reference</u>:</b>
                 <li>
-                    <a href="">W3schools</a>
+                    <a href="https://www.w3schools.com/jsref/jsref_string_trim_end.asp">W3schools</a>
                 </li>
             </ul>
         </div>
@@ -85,7 +90,10 @@
                     <h4><b><u>Code</u>:</b></h4>
                         <p class="examples">
                             <code>
-                                
+                                let text1 = "     Hello World!     ";
+                                let text2 = text1.trimEnd();
+                        
+                                document.getElementById ("example1").innerHTML = "Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
                             </code>
                         </p>
                 </div>
@@ -100,7 +108,10 @@
     </div>
 
     <script>
-     
+        let text1 = "     Hello World!     ";
+        let text2 = text1.trimEnd();
+
+        document.getElementById("example1").innerHTML = "Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
     </script>
 </body>
 </html>
